@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DITECT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body {
+  font-family: Georgia, serif;
+}
+h2{
+  color: rgb(0, 0, 0);
+            font-family: Georgia, serif;
+            align-content: center;
+            font-size: 2rem;
+}
+.center {
+  margin: auto;
+  width: 60%;
+  border: 3px solid #ccc;
+  padding: 20px;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.registerbtn {
+            font-family: "Open Sans", sans-serif,bold;
+            font-size: 20px;
+            letter-spacing: 3px;
+            text-decoration: none;
+            color: #000;
+            cursor: pointer;
+            border: 2px solid;
+            padding: 0.75em 1em;
+            position: relative;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: 95%;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+            background-color: #254fc3
+        }
+
+        input[type=submit]:hover {
+            background-color: #17cce4;
+        }
+
+        .center {
+            margin: auto;
+            width: 90%;
+            border: 3px solid #000000c5;
+            padding: 20px;
+            text-align: center;
+            background-color: rgb(208, 156, 83)
+        }
+</style>
+</head>
+<body>
+
+<div class="center">
+  <h2>Results: </h2>
+  {% if prediction == 1%}
+    <h2 style="color: rgb(189, 16, 16);">You have chance of having Diabetes, please consult a Doctor.</h2>
+    <p style="text-align:center;"> <a href="https://ibb.co/pyNgQJ6"><img src="https://i.ibb.co/3zVwvB5/1.png" alt="HTML" width="700" height="500"></p>
+  {% elif prediction == 0%}
+    <h2 style="color: rgb(25, 31, 197)">No Worries, You don't have chance of having Diabetes.</h2>
+    <p style="text-align: center;"></p> <a href="https://ibb.co/Sxk0dZx"><img src="https://i.ibb.co/9vx2Vdv/2.png" alt="HTML" width="700" height="500"></p>
+  {% endif %}
+</div>
+
+</body>
+</html>
